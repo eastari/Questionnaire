@@ -60,7 +60,7 @@ class QuestionScreenViewController: UIViewController, QuestionScreenViewInput {
     {
         //сделать компонет содержащий вью, и лейбл в центре с надписью нет данных
         // показать его здесь над всеми вьюхами
-        
+        // Вопрос - необходимо ли выносить эту вью в отдельный класс? 
         let contentsFrame = self.view.frame
         let viewForAnimation = UIImageView (frame: CGRect (x: 0, y: 0, width: contentsFrame.width, height: contentsFrame.height))
         viewForAnimation.backgroundColor = UIColor.whiteColor()
