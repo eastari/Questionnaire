@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Question Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="QuestionScreenViewController" id="BYZ-38-t0r" customClass="QuestionScreenViewController" customModule="Questionnaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0l-xc-rEU">
+                                <rect key="frame" x="8" y="28" width="304" height="284"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nUC-rB-Pjw">
+                                <rect key="frame" x="8" y="328" width="304" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Im-St-Ga1">
+                                <rect key="frame" x="8" y="372" width="304" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonDidSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCA-DI-FQ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Im-St-Ga1" firstAttribute="top" secondItem="nUC-rB-Pjw" secondAttribute="bottom" constant="16" id="275-Wv-2WY"/>
+                            <constraint firstAttribute="trailing" secondItem="nUC-rB-Pjw" secondAttribute="trailing" constant="8" id="2dE-GK-CpB"/>
+                            <constraint firstAttribute="trailing" secondItem="A0l-xc-rEU" secondAttribute="trailing" constant="8" id="5Cn-5R-wHI"/>
+                            <constraint firstItem="A0l-xc-rEU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="6B3-2M-vqT"/>
+                            <constraint firstItem="nUC-rB-Pjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="CBy-Oh-XMx"/>
+                            <constraint firstItem="nUC-rB-Pjw" firstAttribute="top" secondItem="A0l-xc-rEU" secondAttribute="bottom" constant="16" id="aGo-dV-8fC"/>
+                            <constraint firstItem="0Im-St-Ga1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="fg5-UN-8ph"/>
+                            <constraint firstItem="A0l-xc-rEU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="inV-HZ-U7A"/>
+                            <constraint firstAttribute="trailing" secondItem="0Im-St-Ga1" secondAttribute="trailing" constant="8" id="s4v-pw-da8"/>
+                            <constraint firstItem="A0l-xc-rEU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="uJu-oP-2tX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="answerSegmentedControl" destination="nUC-rB-Pjw" id="HVI-NI-NvA"/>
+                        <outlet property="questionLabel" destination="A0l-xc-rEU" id="dPP-Sj-UGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="418"/>
+        </scene>
+    </scenes>
+</document>
